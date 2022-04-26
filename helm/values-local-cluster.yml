@@ -1,5 +1,5 @@
 ingress:
-  frontend_hostname: frontend.local
+  backend_hostname: frontend.local
 
 registry: 
   location: localhost:32000

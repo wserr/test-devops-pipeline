@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: backend
 spec:
   selector:
     matchLabels:
-      app: frontend
+      app: backend
   replicas: 1
   template:
     metadata:
       labels:
-        app: frontend
+        app: backend
     spec:
       containers:
-        - name: frontend
-          image: "{{ .Values.registry.location }}/frontend:latest"
+        - name: backend
+          image: "{{ .Values.registry.location }}/backend:latest"
           imagePullPolicy: "Always"
           ports:
             - containerPort: 80
